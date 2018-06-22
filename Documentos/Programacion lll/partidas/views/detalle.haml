@@ -1,0 +1,26 @@
+%h3
+    Detalle partida
+%p
+    Posicion  
+    = @una_nueva.posicion
+%p
+    Descripcion
+    = @una_nueva.descripcion
+%p  
+    Kills
+    = @una_nueva.kills
+%p
+    Puntaje
+    = @una_nueva.puntaje
+%p 
+    Duracion
+    = @una_nueva.duracion          
+%form{action: "/crear_comentario/#{@una_nueva.id}", method: "post"}
+    %textarea{:name => "texto"}
+    %input{:type => "submit"}
+
+
+-@una_nueva.comentarios.each do |comentario|
+    %p
+        =comentario.texto
+    

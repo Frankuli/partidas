@@ -1,0 +1,22 @@
+%h1
+    Actualizar Partida
+
+%form{action: "/update/#{@update.id}", method: "post"}
+    %p
+        Posicion
+    %input{:name => "posicion", :type => "number", :value => "#{@update.posicion}" }
+    %p
+        Descripcion
+    %textarea{:name => "descripcion", :type => "text", :value => "#{@update.descripcion}"}
+    %p
+        Kills
+    %input{:name => "kills", :type => "number", :value => "#{@update.kills}"}
+    %p
+        Puntaje
+    %input{:name => "puntaje", :type => "number", :value => "#{@update.puntaje}"}
+    %p
+        Duracion
+    %input{:name => "duracion", :type => "number", :value => "#{@update.duracion}"}
+    %p
+        Fecha
+    %input{:type => "submit"}

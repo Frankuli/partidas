@@ -1,0 +1,22 @@
+%h1
+    Nueva Partida
+
+%form{action: "/crear", method: "post"}
+    %p
+        Posicion
+    %input{:name => "posicion", :type => "number"}
+    %p
+        Descripcion
+    %textarea{:name => "descripcion", :type => "text"}
+    %p
+        Kills
+    %input{:name => "kills", :type => "number"}
+    %p
+        Puntaje
+    %input{:name => "puntaje", :type => "number"}
+    %p
+        Duracion
+    %input{:name => "duracion", :type => "number"}
+    %p
+        Fecha
+    %input{:type => "submit"}

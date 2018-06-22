@@ -1,0 +1,12 @@
+%a{:href => "/nueva_partida"} 
+    Nueva
+%p
+    - @partidas.each do |partida|
+        %h3
+            = partida.id
+        %a{:href => "/detalle/#{partida.id}"}            
+            Ver detalles
+        %a{:href => "/delete/#{partida.id}"}
+            Eliminar
+        %a{:href => "/update/#{partida.id}"}
+            Actualizar
